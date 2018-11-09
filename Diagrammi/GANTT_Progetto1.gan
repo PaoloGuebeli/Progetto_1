@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-09-10" view-index="0" gantt-divider-location="389" resource-divider-location="300" version="2.8.5" locale="it">
+    <description/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="197" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="94" order="1"/>
+        <field id="tpd5" name="Data di fine" width="94" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="210" order="0"/>
+        <field id="1" name="Ruolo predefinito" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Documentazione" color="#8cb6ce" meeting="false" start="2018-09-05" duration="48" complete="0" expand="true"/>
+        <task id="104" name="Analisi" meeting="false" start="2018-09-12" duration="3" complete="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+            <task id="15" name="Intervista con il committente" meeting="false" start="2018-09-12" duration="1" complete="0" expand="true">
+                <depend id="8" type="2" difference="1" hardness="Strong"/>
+                <depend id="10" type="2" difference="1" hardness="Strong"/>
+                <depend id="39" type="2" difference="1" hardness="Strong"/>
+            </task>
+            <task id="10" name="Analisi dei requisiti" color="#8cb6ce" meeting="false" start="2018-09-14" duration="1" complete="0" expand="true"/>
+            <task id="39" name="Analisi variabili e rischi" color="#8cb6ce" meeting="false" start="2018-09-14" duration="1" complete="0" expand="true"/>
+            <task id="8" name="Analisi del dominio" color="#8cb6ce" meeting="false" start="2018-09-14" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="1" name="Progettazione" color="#000000" meeting="false" start="2018-09-19" duration="8" complete="0" expand="true">
+            <depend id="34" type="2" difference="2" hardness="Strong"/>
+            <depend id="151" type="2" difference="0" hardness="Strong"/>
+            <task id="13" name="Creazione GANTT" color="#8cb6ce" meeting="false" start="2018-09-19" duration="1" complete="0" expand="true">
+                <depend id="105" type="2" difference="1" hardness="Strong"/>
+                <depend id="106" type="2" difference="1" hardness="Strong"/>
+                <depend id="109" type="2" difference="6" hardness="Strong"/>
+            </task>
+            <task id="105" name="Design dell'architettura del sistema" color="#8cb6ce" meeting="false" start="2018-09-21" duration="1" complete="0" expand="true"/>
+            <task id="106" name="Design dei dati e database" color="#8cb6ce" meeting="false" start="2018-09-21" duration="1" complete="0" expand="true"/>
+            <task id="109" name="Design delle interfacce" color="#8cb6ce" meeting="false" start="2018-09-28" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="151" name="Fine analisi e progettazione" color="#8cb6ce" meeting="true" start="2018-10-01" duration="0" complete="0" expand="true"/>
+        <task id="34" name="Implementazione" color="#8cb6ce" meeting="false" start="2018-10-03" duration="18" complete="0" expand="true">
+            <depend id="49" type="2" difference="2" hardness="Strong"/>
+            <depend id="155" type="2" difference="0" hardness="Strong"/>
+            <task id="56" name="Creazione pagina di benvenuto" color="#8cb6ce" meeting="false" start="2018-10-03" duration="1" complete="0" expand="true"/>
+            <task id="60" name="Creazione pagina di registrazione" color="#8cb6ce" meeting="false" start="2018-10-05" duration="4" complete="0" expand="true">
+                <task id="64" name="Creazione interfaccia" color="#8cb6ce" meeting="false" start="2018-10-05" duration="1" complete="0" expand="true">
+                    <depend id="65" type="2" difference="-1" hardness="Strong"/>
+                </task>
+                <task id="65" name="Creazione codice di controllo dati" color="#8cb6ce" meeting="false" start="2018-10-05" duration="4" complete="0" expand="true"/>
+            </task>
+            <task id="62" name="Creazione pagina di controllo" color="#8cb6ce" meeting="false" start="2018-10-17" duration="6" complete="0" expand="true">
+                <task id="71" name="Creazione interfaccia" color="#8cb6ce" meeting="false" start="2018-10-17" duration="1" complete="0" expand="true">
+                    <depend id="73" type="2" difference="4" hardness="Strong"/>
+                    <depend id="83" type="2" difference="1" hardness="Strong"/>
+                </task>
+                <task id="103" name="Creazione file CSV" color="#8cb6ce" meeting="false" start="2018-10-19" duration="1" complete="0" expand="true">
+                    <depend id="146" type="2" difference="4" hardness="Strong"/>
+                </task>
+                <task id="73" name="Creazione codice di scittura dati" color="#8cb6ce" meeting="false" start="2018-10-24" duration="1" complete="0" expand="true">
+                    <task id="83" name="Creazione codice controllo esistenza CSV" color="#8cb6ce" meeting="false" start="2018-10-24" duration="1" complete="0" expand="true">
+                        <depend id="86" type="2" difference="-1" hardness="Strong"/>
+                    </task>
+                    <task id="86" name="Creazione codice di scrittura nei CSV" color="#8cb6ce" meeting="false" start="2018-10-24" duration="1" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="146" name="Creazione pagina consulto dati" color="#000000" meeting="false" start="2018-10-26" duration="1" complete="0" expand="true">
+                <task id="148" name="Creazione interfaccia" meeting="false" start="2018-10-26" duration="1" complete="0" expand="true"/>
+                <task id="150" name="Creazione codice" meeting="false" start="2018-10-26" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="155" name="Fine implementazione" color="#8cb6ce" meeting="true" start="2018-10-29" duration="0" complete="0" expand="true"/>
+        <task id="49" name="Test" color="#8cb6ce" meeting="false" start="2018-10-31" duration="1" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

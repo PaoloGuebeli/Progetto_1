@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet"/>
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<style>
+		@font-face {
+			font-family: Hallosans;
+			src: url("Hallo.otf");
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h1 class="title">SIGN UP</h1>
+		<div class="row">
+			<div class="input-field col s3">
+				<input id="nome" type="text" class="validate" onchange="nameControl()">
+				<label for="nome">Name*</label>
+			</div>
+			<div class="input-field col s3">
+				<input id="cognome" type="text" class="validate" onchange="lastNameControl()">
+				<label for="cognome">Last Name*</label>
+			</div>
+			<div class="input-field col s3">
+				<p>
+					<label>
+						<input name="sesso" class="radio" type="radio" id="m" checked />
+						<span>M</span>
+					</label>
+					<label>
+						<input name="sesso"  class="radio" type="radio" />
+						<span>F</span>
+					</label>
+				</p>
+			</div>
+			<div class="input-field col s3">             
+				<input type = "date" class = "datepicker" id="data"/> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s3">
+				<input id="via" type="text" class="validate"  onchange="streetControl()">
+				<label for="via">Street*</label>
+			</div>
+			<div class="input-field col s3">
+				<input id="ncivico" type="text" class="validate" onchange="houseNControl()">
+				<label for="ncivico">House Number*</label>
+			</div>
+			<div class="input-field col s3">
+				<input id="citta" type="text" class="validate" onchange="cityControl()">
+				<label for="citta">City*</label>
+			</div>
+			<div class="input-field col s3">
+				<input id="nap" type="text" class="validate" onchange="napControl()">
+				<label for="nap">NAP*</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<input id="tel" type="text" class="validate" onchange="phoneControl()">
+				<label for="tel">Phone Number*</label>
+			</div>
+			<div class="input-field col s6">
+				<input id="email" type="text" class="validate"  onchange="emailControl()">
+				<label for="email">E-mail*</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="hobby" class="materialize-textarea" onchange="hobbyControl()"></textarea>
+				<label for="hobby">Hobby</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="pro" class="materialize-textarea" onchange="proControl()"></textarea>
+				<label for="pro">Job</label>
+			</div>
+		</div>
+		<p id="error"></p>
+		<a onclick="write()" href="">
+			<div class="button right" id="avanti" style="visibility:hidden">
+				<p>FINISH</p>
+			</div>
+		</a>
+		<a onclick="deleteAll()">
+			<div class="button left">
+				<p>DELETE</p>
+			</div>
+		</a>
+	</div>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/dataControl.js"></script>
+</body>
+</html>
